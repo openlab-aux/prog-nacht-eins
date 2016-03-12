@@ -9,13 +9,13 @@ Sprachen
 
 Gemacht? Sprache     Mensch     Ordner
 [ ]      Fortran
-[x]      Cobol       richi235   cobol/
+[x]      Cobol       richi235       cobol/
 [ ]      Common Lisp
 [ ]      Ada
 [ ]      Basic
 [ ]      Oberon
-[x]      PL/1        glaxx      pl1/
-[x]      Smalltalk   CruZr      smalltalk/
+[x]      PL/1        glaxx          pl1/
+[x]      Smalltalk   CruZr          smalltalk/
 [ ]      Prolog
-[x]      Forth       Profpatsch forth/
-[ ]      B
+[x]      Forth       Profpatsch     forth/
+[x]      B           sternenseemann b/
