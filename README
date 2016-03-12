@@ -16,6 +16,6 @@ Gemacht? Sprache     Mensch         Ordner
 [ ]      Oberon
 [x]      PL/1        glaxx          pl1/
 [x]      Smalltalk   CruzR          smalltalk/
-[ ]      Prolog
+[x]      Prolog      sternenseemann prolog/
 [x]      Forth       Profpatsch     forth/
 [x]      B           sternenseemann b/

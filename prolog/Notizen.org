@@ -1,0 +1,44 @@
+* Toolchain
+ Ich nehme swi-prolog.
+ http://www.swi-prolog.org/
+
+* Fakten
+ Fakten beginnen mit kleinbuchstaben.
+
+ Simpler Fakt:
+#+BEGIN_SRC prolog
+prolog_is_great.
+#+END_SRC
+ Fakten können Argumente haben:
+
+#+BEGIN_SRC prolog
+age(lukas,15).
+age(prolog,44).
+#+END_SRC
+
+  Es gibt keine Typisierung oder feste Argumentzahl.
+#+BEGIN_SRC prolog
+wtf(foo, 123, bla).
+wtf(nein).
+#+END_SRC
+
+  Abfragesyntax sieht genauso aus wie die Deklarationen, wenn man in swipl die /knowledge base/ geladen hat.
+
+#+BEGIN_EXAMPLE
+?- age(prolog,12).
+false.
+
+?- prolog_is_great.
+true.
+#+END_EXAMPLE
+
+* Variablen
+ Variablen beginnen mit Großbuchstaben.
+
+ Beispiel bei Abfrage:
+#+BEGIN_EXAMPLE
+?- age(prolog, Age).
+Age = 44.
+#+END_EXAMPLE
+
+ Variablen können in weiteren Abfragen nicht mehr benutzt werden.
