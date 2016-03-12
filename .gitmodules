@@ -1,0 +1,3 @@
+[submodule "cobol/cobol-on-wheelchair"]
+	path = cobol/cobol-on-wheelchair
+	url = https://github.com/azac/cobol-on-wheelchair
