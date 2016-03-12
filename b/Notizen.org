@@ -6,11 +6,11 @@
   Es gibt schon Binaries: https://github.com/Leushenko/ybc/releases
     
 *** ybc auf NixOS
-**** nix-shell in b/ starten.
-**** cd path/to/ybc
-**** patchelf --set-interpreter /run/current-system/sw/lib/ld-linux.so.2 ybc
-**** ???
-**** PROFIT
+   - nix-shell in b/ starten.
+   - cd path/to/ybc
+   - patchelf --set-interpreter /run/current-system/sw/lib/ld-linux.so.2 ybc
+   - ???
+   - PROFIT
 
    Notiz: ybc funktioniert, wenn man im Ordner von ybc ybc ausführt, das path-handling ist nicht wirklich advanced.
 
