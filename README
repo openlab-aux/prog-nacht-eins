@@ -11,7 +11,7 @@ Gemacht? Sprache     Mensch     Ordner
 [ ]      Fortran
 [x]      Cobol       richi235       cobol/
 [ ]      Common Lisp
-[ ]      Ada
+[x]      Ada         aphirst        ada/
 [ ]      Basic
 [ ]      Oberon
 [x]      PL/1        glaxx          pl1/
