@@ -1,0 +1,21 @@
+Prog Nacht Eins
+===============
+
+Notizen und Code von der ersten Nacht der alten
+Programmiersprachen im OpenLab Augsburg.
+
+Sprachen
+--------
+
+Gemacht? Sprache     Mensch     Ordner
+[ ]      Fortran
+[x]      Cobol       richi235   cobol/
+[ ]      Common Lisp
+[ ]      Ada
+[ ]      Basic
+[ ]      Oberon
+[x]      PL/1        glaxx      pl1/
+[x]      Smalltalk   CruZr      smalltalk/
+[ ]      Prolog
+[x]      Forth       Profpatsch forth/
+[ ]      B
