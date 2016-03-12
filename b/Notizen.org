@@ -13,3 +13,5 @@
 **** PROFIT
 
    Notiz: ybc funktioniert, wenn man im Ordner von ybc ybc ausführt, das path-handling ist nicht wirklich advanced.
+
+ Ich höre jetzt auf. ybc hat in seiner library hat keine string-funktionen und sonst scheint es nichts zu geben.
