@@ -1,6 +1,5 @@
 main () {
-  auto a;
-  a = 'hi!';
-
-  putchar(a);
+  auto hello;
+  hello = "Hello World!";
+  putstr(hello);
 }
