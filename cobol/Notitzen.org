@@ -1,0 +1,10 @@
+
+* Zusammenfassung
+  - Ich habe mich für "Cobol on Whellchair" entschieden
+    - Link: http://azac.pl/cobol-on-wheelchair/
+    - also ein Webframework für webseiten mit cobol
+  - Ziel wird eine klenie webseite mit cobol on wheelchair
+    - erst "hallo welt"
+    - dann ein kleiner taschenrechner
+    - oder ein text adventure
+      - mit drachenlord zitaten
