@@ -2,9 +2,97 @@
 * Zusammenfassung
   - Ich habe mich für "Cobol on Whellchair" entschieden
     - Link: http://azac.pl/cobol-on-wheelchair/
-    - also ein Webframework für webseiten mit cobol
-  - Ziel wird eine klenie webseite mit cobol on wheelchair
+    - also ein webframework für webseiten mit cobol
+  - ziel wird eine klenie webseite mit cobol on wheelchair
     - erst "hallo welt"
     - dann ein kleiner taschenrechner
     - oder ein text adventure
       - mit drachenlord zitaten
+  - cobol on wheelchair geht finaly
+
+* das cobol "environment"
+  - ich wähle gnu cobol
+    - sudo apt install open-cobol
+  - den compiler callt man mit "cobc"
+
+
+* Über die Sprache Cobol
+** Kommentare: *>
+
+** Die 4 Divisionen
+    - Jede Cobol Funktion (auch programm genannt bei cobol) kann folgende 4 Divisionen enthalten.
+    - Es sind aber nicht alle 4 notwendig,
+      - es gibt auch funktionen mit nur 2 Divisionen (Identification und procedure).
+    - Jede Division kann bestimmte fest vorgegebene Sektionen enthalten
+      - sind aber auch nicht immer alle notwendig
+
+*** IDENTIFICATION
+*** ENVIRONMENT
+*** DATA
+*** PROCEDURE
+
+
+
+
+** Zur Identification Division
+   - jede methode hat eine
+   - der Name des programms steht hier
+
+** Zur Data Division:
+
+
+*** Die Daten sind hierarchisch strukturiert
+**** Beispiel:
+#+BEGIN_EXAMPLE
+   01  some-record.                   *> Aggregate group record item
+           05  num            PIC 9(10).  *> Elementary item
+           05  the-date.                  *> Aggregate (sub)group record item
+               10  the-year   PIC 9(4).   *> Elementary item
+               10  the-month  PIC 99.     *> Elementary item
+               10  the-day    PIC 99.     *> Elementary item
+#+END_EXPAMPLE
+
+- some record ist die übergeordnete Datentyp
+- num und the-date sind teil von some-record
+- die zahlen denotieren das, etwas mit höherer zahl ist teil von etwas mit niedrigerer zahl
+- trotzdem sind sie individuell referenzier und verwendbar
+- es ist also mehr so eine semantische notitzen
+
+*** Zu Datentypen
+    - In Cobol kann man 2 Dinge über Variablen festlegen:
+      - Darstellung (mit PIC)
+        - meistens macht man nur das
+        - also in allen cobol programmen die ich gelesen habe
+      - internes speicher format
+        - USAGE Keyword
+        - Default ist USAGE DISPLAY
+          - also String
+
+**** über PIC
+     - PIC A(30)
+       - A heißt character (non utf-8)
+         - keine zahl
+       - (30) heißt 30 davon, also 30 characters
+     - PIC X(30)
+       - X heißt "any character" also alphanumeric
+     - for details see: https://en.wikipedia.org/wiki/COBOL#Syntax
+
+**** Beispiele:
+
+   05  num            PIC 9(10).
+
+- 05: untergeordnet von irgendwas
+- num: variablenname
+- PIC 9(10): dezimal (9 heißt dezimal (wirklich, kein witz)) 10 davon
+  - also 10 stelliger integer dezimal
+
+
+** Zu den Operationen
+*** MOVE ist die Zuweisung (also "=" )
+*** Mathematische operationen sind seeehr verbose
+    - Beispiel:
+      - Add 1 to X
+      - entspricht:
+      - x=x+x;
+*** goback ist return
+*** display ist print()
