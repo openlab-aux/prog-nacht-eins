@@ -17,7 +17,8 @@
 
 
 * Über die Sprache Cobol
-** Kommentare: *>
+** Kommentare:
+   *>
 
 ** Die 4 Divisionen
     - Jede Cobol Funktion (auch programm genannt bei cobol) kann folgende 4 Divisionen enthalten.
@@ -54,8 +55,8 @@
 
 #+END_EXAMPLE
 
-- some record ist die übergeordnete Datentyp
-- num und the-date sind teil von some-record
+- ~some-record~ ist die übergeordnete Datentyp
+- ~num~ und ~the-date~ sind teil von ~some-record~
 - die zahlen denotieren das, etwas mit höherer zahl ist teil von etwas mit niedrigerer zahl
 - trotzdem sind sie individuell referenzier und verwendbar
 - es ist also mehr so eine semantische notitzen
@@ -81,7 +82,7 @@
 
 **** Beispiele:
 
-   05  num            PIC 9(10).
+   ~05  num            PIC 9(10).~
 
 - 05: untergeordnet von irgendwas
 - num: variablenname
