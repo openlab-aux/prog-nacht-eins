@@ -1,14 +1,18 @@
 * Toolchain
- Ich nehme swi-prolog.
- http://www.swi-prolog.org/
+ Ich nehme [[http://www.swi-prolog.org/][swi-prolog]].
+
+* Material
+ - [[http://www.doc.gold.ac.uk/~mas02gw/prolog_tutorial/prologpages/rules.html][Prolog-Tutorial]]
+ - [[https://en.wikipedia.org/wiki/Prolog][WP: Prolog]]
+ - [[https://en.wikipedia.org/wiki/Prolog_syntax_and_semantics][WP: Syntax & Semantics]]
 
 * Fakten
- Fakten beginnen mit kleinbuchstaben.
-
  Simpler Fakt:
+
 #+BEGIN_SRC prolog
 prolog_is_great.
 #+END_SRC
+
  Fakten können Argumente haben:
 
 #+BEGIN_SRC prolog
@@ -17,6 +21,7 @@ age(prolog,44).
 #+END_SRC
 
   Es gibt keine Typisierung oder feste Argumentzahl.
+
 #+BEGIN_SRC prolog
 wtf(foo, 123, bla).
 wtf(nein).
@@ -42,3 +47,62 @@ Age = 44.
 #+END_EXAMPLE
 
  Variablen können in weiteren Abfragen nicht mehr benutzt werden.
+
+* Regeln
+
+* Datentypen
+ Im dynamisch getyptenProlog gibt es nur einen Typ, den ‚term‘. Es ist ein Summentyp aus den folgenden Typen:
+
+** Atome
+  Atome sind so wie Symbole in Lisp. Sie haben keine Bedeutung für die Implementation, aber für den Code/die Programmierin. Bei Beginn mit Großbuchstaben oder, wenn sie spezielle Zeichen enthalten, müssen Atome in einfachen Anführungszeichen geschrieben werden.: ~hallo~, ~lukas~, ~foo_bar_baz~, ~'Schwarze Magie'~, ~'(:[])'~ etc.
+
+** Variablen
+  Müssen mit einem Großbuchstaben beginnen. Variablen sind in Prolog Platzhalter für beliebige Terme.
+
+** Zahlen
+  Können Ganzzahlen oder Gleitkommazahlen sein. Für (SWI) Prolog sind aber 123 und 123.0 unterschiedliche Zahlen. Ziemlich doof, meiner Meinung nach, ich weiß nicht, warum das so sein sollte.
+
+  #+BEGIN_QUOTE
+  Many Prolog implementations also provide unbounded integers and rational numbers.
+  #+END_QUOTE
+
+  TODO: Nachschauen für SWI Prolog
+
+** Compound Terms
+  Ein ‚compound term‘ sieht folgendermaßen aus:
+
+  #+BEGIN_SRC prolog
+  hallo("welt", 42, yannik).
+  #+END_SRC prolog
+
+  Es besteht aus einem ‚Funktor‘ (~hallo~) und Argumenten in Klammern, die wieder Terme sein müssen. Die Anzahl von Argumenten ist die sog. ‚arity‘ des Funktors. Es gibt auch Infixnotation für Funktoren.
+
+** Listen
+  #+BEGIN_QUOTE
+  Der Lisp-Entwickler sprach: „Man gebe mir eine Liste und ich werde die Welt aus den Angeln heben“
+  #+END_QUOTE
+
+#+BEGIN_SRC prolog
+[1,2,3]
+[hebel,welt]
+[23,koch]
+#+END_SRC
+
+  Intern ist eine Liste ein ‚compound term‘.
+
+** Strings
+   Wie man es erwarten würde mit quotes. Ist auch ein ‚comound term‘.
+
+   SWI Prolog hat natürlich Unterstützung für Unicode, so wie das halt 2016 sein muss.
+
+#+BEGIN_SRC prolog
+unicode("λαμβδα").
+#+END_SRC
+
+* I/O
+  Unmöglich?
+
+* Ist Prolog turing-complete?
+ Ja.
+
+ … Man sollte™ einen Brainfuckinterpreter schreiben.

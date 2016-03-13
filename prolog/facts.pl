@@ -7,3 +7,6 @@ age(prolog,44).
 
 wtf(foo, 123, bla).
 wtf(nein).
+wtf('(:[])').
+
+unicode("λαμβδα").
